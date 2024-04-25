@@ -1,0 +1,106 @@
+@use "variables";
+
+body {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 12px;
+  color: #FFFFFF;
+  background: #000000;
+}
+
+main.container {
+  padding: 0 0px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+$color-purple: #5600E1;
+$bg-dark-grey: #272727;
+
+.section {
+  
+  &__title {
+	  font-family: "Montserrat-SemiBold";
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+  }
+}
+
+.btn-main {
+  display: inline-block;
+  width: 100%;
+  padding: 16px 14px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  color: #FFFFFF;
+  background: $color-purple;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  main.container {
+    padding: 0 10px;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 420px);
+    grid-template-areas:
+      "banners comment"
+      "banner-special-offer comment"
+      "advantages comment";
+    gap: 7px 20px;
+    margin-top: 60px;
+  }
+  
+  .banners {
+    grid-area: banners;
+  }
+  .banner-special-offer {
+    grid-area: banner-special-offer;
+  }
+  .advantages {
+    grid-area: advantages;
+  }
+  .comment {
+    grid-area: comment;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+  .main {
+    grid-template-columns: 1fr minmax(auto, 520px);
+  }
+  .section {
+  
+    &__title {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .container {
+    max-width: 1495px;
+  }
+}
